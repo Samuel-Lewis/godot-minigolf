@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/splitT.obj-f0bf9b71eb21b5e6d4d9fa3a01bc6c03.mesh"
+
+[deps]
+
+files=[ "res://.import/splitT.obj-f0bf9b71eb21b5e6d4d9fa3a01bc6c03.mesh" ]
+
+source_file="res://Assets/Course/splitT.obj"
+dest_files=[ "res://.import/splitT.obj-f0bf9b71eb21b5e6d4d9fa3a01bc6c03.mesh", "res://.import/splitT.obj-f0bf9b71eb21b5e6d4d9fa3a01bc6c03.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

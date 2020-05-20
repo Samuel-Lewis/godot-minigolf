@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gap.obj-568b3380ff002860c8eec035f7cc180f.mesh"
+
+[deps]
+
+files=[ "res://.import/gap.obj-568b3380ff002860c8eec035f7cc180f.mesh" ]
+
+source_file="res://Assets/Course/gap.obj"
+dest_files=[ "res://.import/gap.obj-568b3380ff002860c8eec035f7cc180f.mesh", "res://.import/gap.obj-568b3380ff002860c8eec035f7cc180f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

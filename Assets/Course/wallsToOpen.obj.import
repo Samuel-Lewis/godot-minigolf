@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallsToOpen.obj-a2c9c00f19634a6c95311606ccf987dd.mesh"
+
+[deps]
+
+files=[ "res://.import/wallsToOpen.obj-a2c9c00f19634a6c95311606ccf987dd.mesh" ]
+
+source_file="res://Assets/Course/wallsToOpen.obj"
+dest_files=[ "res://.import/wallsToOpen.obj-a2c9c00f19634a6c95311606ccf987dd.mesh", "res://.import/wallsToOpen.obj-a2c9c00f19634a6c95311606ccf987dd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

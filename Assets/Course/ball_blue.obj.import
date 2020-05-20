@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ball_blue.obj-ae7dbe1f8dee9677d1379d488790e15b.mesh"
+
+[deps]
+
+files=[ "res://.import/ball_blue.obj-ae7dbe1f8dee9677d1379d488790e15b.mesh" ]
+
+source_file="res://Assets/Course/ball_blue.obj"
+dest_files=[ "res://.import/ball_blue.obj-ae7dbe1f8dee9677d1379d488790e15b.mesh", "res://.import/ball_blue.obj-ae7dbe1f8dee9677d1379d488790e15b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

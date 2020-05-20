@@ -1,0 +1,137 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scenes/Levels/basic.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Course/ball_blue.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Scenes/TestScene.gd" type="Script" id=3]
+[ext_resource path="res://Components/Player/Player.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Levels/closed.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Components/Camera/BallAnchor.gd" type="Script" id=6]
+[ext_resource path="res://GUI/Font.tres" type="DynamicFont" id=7]
+[ext_resource path="res://GUI/GUI.gd" type="Script" id=8]
+[ext_resource path="res://GUI/Assets/blue_panel.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Levels/blocks.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/skybox.png" type="Texture" id=11]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 11 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+
+[sub_resource type="PhysicsMaterial" id=3]
+bounce = 0.2
+
+[sub_resource type="SphereShape" id=4]
+radius = 0.04
+
+[node name="Root" type="Spatial"]
+script = ExtResource( 3 )
+levels = [ ExtResource( 1 ), ExtResource( 10 ), ExtResource( 5 ) ]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.819152, -0.40558, 0.40558, 0, 0.707107, 0.707107, -0.573576, -0.579228, 0.579228, 4, 4, 0 )
+shadow_enabled = true
+shadow_contact = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 8 )
+
+[node name="HitCounter" type="TextureRect" parent="CanvasLayer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 110.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="CanvasLayer/HitCounter"]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 90.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 7 )
+text = "Hits"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Counter" type="Label" parent="CanvasLayer/HitCounter"]
+margin_left = 10.0
+margin_top = 50.0
+margin_right = 90.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 7 )
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="Popup" parent="CanvasLayer"]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Message"]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Message"]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_fonts/font = ExtResource( 7 )
+text = "FAILED!"
+align = 1
+valign = 1
+
+[node name="Player" type="RigidBody" parent="."]
+collision_layer = 3
+collision_mask = 3
+physics_material_override = SubResource( 3 )
+continuous_cd = true
+linear_damp = 0.0
+angular_damp = 0.8
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ball_blue" type="MeshInstance" parent="Player"]
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Player"]
+shape = SubResource( 4 )
+
+[node name="BallAnchor" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CameraAnchor" type="Position3D" parent="BallAnchor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2 )
+
+[node name="Camera" type="Camera" parent="BallAnchor/CameraAnchor"]
+transform = Transform( 1, 0, 0, 0, 0.944054, 0.32979, 0, -0.32979, 0.944054, 0, 0.942111, -0.344067 )
+current = true
+[connection signal="ui_message" from="." to="CanvasLayer" method="_on_Root_ui_message"]
+[connection signal="fail" from="Player" to="." method="_on_Player_fail"]
+[connection signal="hits_changed" from="Player" to="CanvasLayer" method="_on_Player_hits_changed"]
+[connection signal="win" from="Player" to="." method="_on_Player_win"]

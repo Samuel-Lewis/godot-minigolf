@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roundCornerC.obj-60f047dfe1c851b16531cbad56080d0c.mesh"
+
+[deps]
+
+files=[ "res://.import/roundCornerC.obj-60f047dfe1c851b16531cbad56080d0c.mesh" ]
+
+source_file="res://Assets/Course/roundCornerC.obj"
+dest_files=[ "res://.import/roundCornerC.obj-60f047dfe1c851b16531cbad56080d0c.mesh", "res://.import/roundCornerC.obj-60f047dfe1c851b16531cbad56080d0c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

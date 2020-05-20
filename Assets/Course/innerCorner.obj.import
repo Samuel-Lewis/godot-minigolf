@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/innerCorner.obj-15daccfd9b796f66a0993db5d2e02413.mesh"
+
+[deps]
+
+files=[ "res://.import/innerCorner.obj-15daccfd9b796f66a0993db5d2e02413.mesh" ]
+
+source_file="res://Assets/Course/innerCorner.obj"
+dest_files=[ "res://.import/innerCorner.obj-15daccfd9b796f66a0993db5d2e02413.mesh", "res://.import/innerCorner.obj-15daccfd9b796f66a0993db5d2e02413.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

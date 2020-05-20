@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hillSquare.obj-840c90d6da4403598ee927de694ec0b6.mesh"
+
+[deps]
+
+files=[ "res://.import/hillSquare.obj-840c90d6da4403598ee927de694ec0b6.mesh" ]
+
+source_file="res://Assets/Course/hillSquare.obj"
+dest_files=[ "res://.import/hillSquare.obj-840c90d6da4403598ee927de694ec0b6.mesh", "res://.import/hillSquare.obj-840c90d6da4403598ee927de694ec0b6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

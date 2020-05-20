@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://MeshLib.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://Scenes/Levels/Level.gd" type="Script" id=2]
+
+
+[node name="Level" type="Node"]
+script = ExtResource( 2 )
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 1, 0.146, 1 )
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PoolIntArray( 0, 0, 1441800, 0, 65534, 1048590, 0, 65535, 1048579 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 1, 0, 0 )
+}
+
+[node name="Start" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+
+[node name="Holes" type="Node" parent="."]
+
+[node name="Position3D" type="Position3D" parent="Holes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )

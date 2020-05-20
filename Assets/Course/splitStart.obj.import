@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/splitStart.obj-422184ef838073e86f821889129e6627.mesh"
+
+[deps]
+
+files=[ "res://.import/splitStart.obj-422184ef838073e86f821889129e6627.mesh" ]
+
+source_file="res://Assets/Course/splitStart.obj"
+dest_files=[ "res://.import/splitStart.obj-422184ef838073e86f821889129e6627.mesh", "res://.import/splitStart.obj-422184ef838073e86f821889129e6627.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/holeRound.obj-09a230f462f35bd3aef597474a3e84dc.mesh"
+
+[deps]
+
+files=[ "res://.import/holeRound.obj-09a230f462f35bd3aef597474a3e84dc.mesh" ]
+
+source_file="res://Assets/Course/holeRound.obj"
+dest_files=[ "res://.import/holeRound.obj-09a230f462f35bd3aef597474a3e84dc.mesh", "res://.import/holeRound.obj-09a230f462f35bd3aef597474a3e84dc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

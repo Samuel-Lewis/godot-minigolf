@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/rampSquare.obj-2dbe2dde5917934dfdc7ea782bbe2392.mesh"
+
+[deps]
+
+files=[ "res://.import/rampSquare.obj-2dbe2dde5917934dfdc7ea782bbe2392.mesh" ]
+
+source_file="res://Assets/Course/rampSquare.obj"
+dest_files=[ "res://.import/rampSquare.obj-2dbe2dde5917934dfdc7ea782bbe2392.mesh", "res://.import/rampSquare.obj-2dbe2dde5917934dfdc7ea782bbe2392.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

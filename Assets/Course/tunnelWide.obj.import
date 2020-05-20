@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tunnelWide.obj-123fe730a29f8f78d3c4d20ddb5b7d0b.mesh"
+
+[deps]
+
+files=[ "res://.import/tunnelWide.obj-123fe730a29f8f78d3c4d20ddb5b7d0b.mesh" ]
+
+source_file="res://Assets/Course/tunnelWide.obj"
+dest_files=[ "res://.import/tunnelWide.obj-123fe730a29f8f78d3c4d20ddb5b7d0b.mesh", "res://.import/tunnelWide.obj-123fe730a29f8f78d3c4d20ddb5b7d0b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

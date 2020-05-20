@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/windmill.obj-0f644494a7a3b398b9b3d97db1ba1566.mesh"
+
+[deps]
+
+files=[ "res://.import/windmill.obj-0f644494a7a3b398b9b3d97db1ba1566.mesh" ]
+
+source_file="res://Assets/Course/windmill.obj"
+dest_files=[ "res://.import/windmill.obj-0f644494a7a3b398b9b3d97db1ba1566.mesh", "res://.import/windmill.obj-0f644494a7a3b398b9b3d97db1ba1566.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

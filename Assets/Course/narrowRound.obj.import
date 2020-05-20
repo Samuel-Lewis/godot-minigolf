@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/narrowRound.obj-b6049686e5bdc3ea54c4508328f91315.mesh"
+
+[deps]
+
+files=[ "res://.import/narrowRound.obj-b6049686e5bdc3ea54c4508328f91315.mesh" ]
+
+source_file="res://Assets/Course/narrowRound.obj"
+dest_files=[ "res://.import/narrowRound.obj-b6049686e5bdc3ea54c4508328f91315.mesh", "res://.import/narrowRound.obj-b6049686e5bdc3ea54c4508328f91315.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

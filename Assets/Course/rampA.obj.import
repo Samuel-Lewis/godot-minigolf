@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/rampA.obj-d4a7114d5865271e98a0d4cbed71d06c.mesh"
+
+[deps]
+
+files=[ "res://.import/rampA.obj-d4a7114d5865271e98a0d4cbed71d06c.mesh" ]
+
+source_file="res://Assets/Course/rampA.obj"
+dest_files=[ "res://.import/rampA.obj-d4a7114d5865271e98a0d4cbed71d06c.mesh", "res://.import/rampA.obj-d4a7114d5865271e98a0d4cbed71d06c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

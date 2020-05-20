@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/obstacleBlock.obj-63a80ee18326a794491a3b429590d104.mesh"
+
+[deps]
+
+files=[ "res://.import/obstacleBlock.obj-63a80ee18326a794491a3b429590d104.mesh" ]
+
+source_file="res://Assets/Course/obstacleBlock.obj"
+dest_files=[ "res://.import/obstacleBlock.obj-63a80ee18326a794491a3b429590d104.mesh", "res://.import/obstacleBlock.obj-63a80ee18326a794491a3b429590d104.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

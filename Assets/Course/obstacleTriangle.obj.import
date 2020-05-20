@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/obstacleTriangle.obj-31a8bbea5cf2631a8dcb8b08be567821.mesh"
+
+[deps]
+
+files=[ "res://.import/obstacleTriangle.obj-31a8bbea5cf2631a8dcb8b08be567821.mesh" ]
+
+source_file="res://Assets/Course/obstacleTriangle.obj"
+dest_files=[ "res://.import/obstacleTriangle.obj-31a8bbea5cf2631a8dcb8b08be567821.mesh", "res://.import/obstacleTriangle.obj-31a8bbea5cf2631a8dcb8b08be567821.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

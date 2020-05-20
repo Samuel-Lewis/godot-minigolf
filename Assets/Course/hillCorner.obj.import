@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hillCorner.obj-a2caf30b79f0e6a64b3d826b40b18e21.mesh"
+
+[deps]
+
+files=[ "res://.import/hillCorner.obj-a2caf30b79f0e6a64b3d826b40b18e21.mesh" ]
+
+source_file="res://Assets/Course/hillCorner.obj"
+dest_files=[ "res://.import/hillCorner.obj-a2caf30b79f0e6a64b3d826b40b18e21.mesh", "res://.import/hillCorner.obj-a2caf30b79f0e6a64b3d826b40b18e21.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
