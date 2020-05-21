@@ -38,6 +38,7 @@ shadow_enabled = true
 shadow_contact = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
 script = ExtResource( 8 )
 
 [node name="HitCounter" type="TextureRect" parent="CanvasLayer"]
@@ -99,6 +100,48 @@ text = "FAILED!"
 align = 1
 valign = 1
 
+[node name="Instructions" type="Popup" parent="CanvasLayer"]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Instructions"]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instructions"]
+margin_top = 97.1614
+margin_right = 1280.0
+margin_bottom = 439.161
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[center]
+LMB to hit
+RMB to aim
+R to restart
+
+[wave amp=50 freq=3][rainbow freq=1]
+Do your best. I believe in you.
+[/rainbow][/wave]
+
+(LMB to continue)[/center]"
+text = "
+LMB to hit
+RMB to aim
+R to restart
+
+
+Do your best. I believe in you.
+
+
+(LMB to continue)"
+
 [node name="Player" type="RigidBody" parent="."]
 collision_layer = 3
 collision_mask = 3
@@ -132,6 +175,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2 )
 transform = Transform( 1, 0, 0, 0, 0.944054, 0.32979, 0, -0.32979, 0.944054, 0, 0.942111, -0.344067 )
 current = true
 [connection signal="ui_message" from="." to="CanvasLayer" method="_on_Root_ui_message"]
+[connection signal="instructions_hidden" from="CanvasLayer" to="." method="_on_CanvasLayer_instructions_hidden"]
 [connection signal="fail" from="Player" to="." method="_on_Player_fail"]
 [connection signal="hits_changed" from="Player" to="CanvasLayer" method="_on_Player_hits_changed"]
 [connection signal="win" from="Player" to="." method="_on_Player_win"]
