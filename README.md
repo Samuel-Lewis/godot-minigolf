@@ -10,7 +10,7 @@ Tiny little mini golf game built in [Godot](https://godotengine.org/)!
 
 ## TODO
 
-- [ ] Add restriction to only hit when the ball has stopped
+- [x] Add restriction to only hit when the ball has stopped
 - [ ] Add hole pars?
-- [ ] Add more levels
+- [x] Add more levels
 - [ ] Fix shadows clipping close to camera

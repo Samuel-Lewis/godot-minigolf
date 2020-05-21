@@ -1,16 +1,17 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Levels/basic.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Course/ball_blue.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Scenes/TestScene.gd" type="Script" id=3]
 [ext_resource path="res://Components/Player/Player.gd" type="Script" id=4]
-[ext_resource path="res://Scenes/Levels/closed.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Levels/hole.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Components/Camera/BallAnchor.gd" type="Script" id=6]
 [ext_resource path="res://GUI/Font.tres" type="DynamicFont" id=7]
 [ext_resource path="res://GUI/GUI.gd" type="Script" id=8]
 [ext_resource path="res://GUI/Assets/blue_panel.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Levels/blocks.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/skybox.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Levels/open.tscn" type="PackedScene" id=12]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 11 )
@@ -27,7 +28,7 @@ radius = 0.04
 
 [node name="Root" type="Spatial"]
 script = ExtResource( 3 )
-levels = [ ExtResource( 1 ), ExtResource( 10 ), ExtResource( 5 ) ]
+levels = [ ExtResource( 1 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ) ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
@@ -55,7 +56,7 @@ __meta__ = {
 margin_left = 10.0
 margin_top = 20.0
 margin_right = 90.0
-margin_bottom = 40.0
+margin_bottom = 55.0
 custom_fonts/font = ExtResource( 7 )
 text = "Hits"
 align = 1
@@ -68,7 +69,7 @@ __meta__ = {
 margin_left = 10.0
 margin_top = 50.0
 margin_right = 90.0
-margin_bottom = 70.0
+margin_bottom = 85.0
 custom_fonts/font = ExtResource( 7 )
 text = "3"
 align = 1
@@ -116,9 +117,9 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instructions"]
-margin_top = 97.1614
+margin_top = 129.847
 margin_right = 1280.0
-margin_bottom = 439.161
+margin_bottom = 630.847
 custom_fonts/normal_font = ExtResource( 7 )
 bbcode_enabled = true
 bbcode_text = "[center]
@@ -130,7 +131,7 @@ R to restart
 Do your best. I believe in you.
 [/rainbow][/wave]
 
-(LMB to continue)[/center]"
+LMB to start[/center]"
 text = "
 LMB to hit
 RMB to aim
@@ -140,15 +141,19 @@ R to restart
 Do your best. I believe in you.
 
 
-(LMB to continue)"
+LMB to start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Player" type="RigidBody" parent="."]
 collision_layer = 3
 collision_mask = 3
+mass = 0.8
 physics_material_override = SubResource( 3 )
 continuous_cd = true
 linear_damp = 0.0
-angular_damp = 0.8
+angular_damp = 0.9
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true

@@ -1,6 +1,6 @@
 extends RigidBody
 
-export var strength := 1
+export var strength := 2.5
 export var reset_height := -3.0
 export var fail_timeout := 0.5
 
@@ -18,9 +18,9 @@ func _ready():
 func _physics_process(delta):
 	if ball_anchor.get_global_transform().origin.y < reset_height:
 		emit_signal("fail")
-
+	
 func _input(event):
-	if Input.is_action_just_released("hit"):
+	if Input.is_action_just_released("hit") && get_linear_velocity().length_squared() < 0.01:
 		hit()
 
 func hit():
