@@ -29,3 +29,9 @@ func _on_Root_ui_message(message):
 	message_popup.popup_centered()
 	yield(get_tree().create_timer(message_timeout), "timeout")
 	message_popup.hide()
+
+func _on_Player_power_up(value01 : float) -> void:
+	$PowerProgress.value = value01
+	
+	var percent = round(value01 * 100)
+	$PowerProgress/PowerPercentText.text = ("%s" % percent) + "%"
