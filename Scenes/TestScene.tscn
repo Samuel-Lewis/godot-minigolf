@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Levels/basic.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Course/ball_blue.obj" type="ArrayMesh" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/Levels/blocks.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/skybox.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Levels/open.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Components/Player/GroundFinder.gd" type="Script" id=13]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 11 )
@@ -48,9 +49,6 @@ margin_top = 10.0
 margin_right = 110.0
 margin_bottom = 110.0
 texture = ExtResource( 9 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Title" type="Label" parent="CanvasLayer/HitCounter"]
 margin_left = 10.0
@@ -146,6 +144,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PowerProgress" type="TextureProgress" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -139.0
+margin_top = -29.0
+margin_right = 139.0
+margin_bottom = -12.0
+max_value = 1.0
+step = 0.01
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 9 )
+tint_under = Color( 0.14902, 0.14902, 0.14902, 1 )
+nine_patch_stretch = true
+
+[node name="PowerPercentText" type="Label" parent="CanvasLayer/PowerProgress"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_top = -15.0
+margin_right = 20.0
+margin_bottom = -1.0
+text = "100%"
+align = 1
+valign = 1
+
+[node name="RayCast" type="RayCast" parent="."]
+enabled = true
+cast_to = Vector3( 0, -0.05, 0 )
+script = ExtResource( 13 )
+_player_node_path = NodePath("../Player")
+
 [node name="Player" type="RigidBody" parent="."]
 collision_layer = 3
 collision_mask = 3
@@ -179,8 +210,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2 )
 [node name="Camera" type="Camera" parent="BallAnchor/CameraAnchor"]
 transform = Transform( 1, 0, 0, 0, 0.944054, 0.32979, 0, -0.32979, 0.944054, 0, 0.942111, -0.344067 )
 current = true
+
 [connection signal="ui_message" from="." to="CanvasLayer" method="_on_Root_ui_message"]
 [connection signal="instructions_hidden" from="CanvasLayer" to="." method="_on_CanvasLayer_instructions_hidden"]
 [connection signal="fail" from="Player" to="." method="_on_Player_fail"]
 [connection signal="hits_changed" from="Player" to="CanvasLayer" method="_on_Player_hits_changed"]
+[connection signal="power_up" from="Player" to="CanvasLayer" method="_on_Player_power_up"]
 [connection signal="win" from="Player" to="." method="_on_Player_win"]
